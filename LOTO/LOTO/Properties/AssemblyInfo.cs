@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LOTO")]
+[assembly: AssemblyTitle("WindowsFormsApplication3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LOTO")]
+[assembly: AssemblyProduct("WindowsFormsApplication3")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("388dd891-e7b9-429b-b635-081598384dbf")]
+[assembly: Guid("7bf51c78-cdcf-40a2-8924-4d1dabfdfde7")]
 
 // Version information for an assembly consists of the following four values:
 //

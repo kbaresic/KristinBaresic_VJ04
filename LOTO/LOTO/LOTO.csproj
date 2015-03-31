@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4232339D-2C54-4144-AF96-5FD3299EF767}</ProjectGuid>
+    <ProjectGuid>{B4B80218-8B49-4493-B12F-B969919AF2A2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LOTO</RootNamespace>
-    <AssemblyName>LOTO</AssemblyName>
+    <RootNamespace>WindowsFormsApplication3</RootNamespace>
+    <AssemblyName>WindowsFormsApplication3</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -8,43 +8,57 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LOTO
+namespace WindowsFormsApplication3
 {
-    public partial class Form1 : Form
+    public partial class FrmLoto : Form
     {
-        public Form1()
+        private Loto loto;
+
+        public FrmLoto()
         {
             InitializeComponent();
+            loto = new Loto();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnUplati_Click(object sender, EventArgs e)
         {
+            List<string> vrijednosti = new List<string>();
+            vrijednosti.Add(txtUplaceniBroj1.Text);
+            vrijednosti.Add(txtUplaceniBroj2.Text);
+            vrijednosti.Add(txtUplaceniBroj3.Text);
+            vrijednosti.Add(txtUplaceniBroj4.Text);
+            vrijednosti.Add(txtUplaceniBroj5.Text);
+            vrijednosti.Add(txtUplaceniBroj6.Text);
+            vrijednosti.Add(txtUplaceniBroj7.Text);
 
+            bool ispravnaKombinacija = loto.UnesiUplaceneBrojeve(vrijednosti);
+
+            if (ispravnaKombinacija == true)
+            {
+                btnOdigraj.Enabled = true;
+            }
+
+            else
+            {
+                btnOdigraj.Enabled = false;
+                MessageBox.Show("Kombinacija uplacenih brojeva nije ispravna!");
+            }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnOdigraj_Click(object sender, EventArgs e)
         {
+            loto.GenerirajKombinaciju();
 
-        }
+            Dobitni1.Text = loto.DobitniBrojevi[0].ToString();
+            Dobitni2.Text = loto.DobitniBrojevi[1].ToString();
+            Dobitni3.Text = loto.DobitniBrojevi[2].ToString();
+            Dobitni4.Text = loto.DobitniBrojevi[3].ToString();
+            Dobitni5.Text = loto.DobitniBrojevi[4].ToString();
+            Dobitni6.Text = loto.DobitniBrojevi[5].ToString();
+            Dobitni7.Text = loto.DobitniBrojevi[6].ToString();
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            int brojPogodaka = loto.IzracunajPogotke();
+            lblBrojPogodaka.Text = brojPogodaka.ToString();
         }
     }
 }
